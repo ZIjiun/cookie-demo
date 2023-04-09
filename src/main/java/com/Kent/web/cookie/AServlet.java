@@ -1,4 +1,4 @@
-package com.Kent.web;
+package com.Kent.web.cookie;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
