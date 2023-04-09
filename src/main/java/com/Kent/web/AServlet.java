@@ -17,6 +17,9 @@ public class AServlet extends HttpServlet {
         // 1. 創建 cookie 物件
         Cookie cookie = new Cookie("username", "zs");
 
+        // 設置存活時間 1周7天
+        cookie.setMaxAge(60*60*24*7);
+
         // 2. 發送 cookie. response
         resp.addCookie(cookie);
     }
