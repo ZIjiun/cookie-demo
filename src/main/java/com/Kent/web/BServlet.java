@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.URLDecoder;
 
 @WebServlet("/bServlet")
 public class BServlet extends HttpServlet {
@@ -22,6 +23,8 @@ public class BServlet extends HttpServlet {
             String name = cookie.getName();
             if("username".equals(name)) {
                 String value = cookie.getValue();
+                // URL 解碼
+                value = URLDecoder.decode(value, "UTF-8");
                 System.out.println(name+":"+value);
             }
         }
