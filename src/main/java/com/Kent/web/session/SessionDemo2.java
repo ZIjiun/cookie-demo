@@ -15,6 +15,7 @@ public class SessionDemo2 extends HttpServlet {
         // 取得資料 從 Session 中
         // 1. 取得 Session 物件
         HttpSession session = req.getSession();
+        System.out.println(session); //org.apache.catalina.session.StandardSessionFacade@792ae777
         // 2.
         Object username = session.getAttribute("username");
         System.out.println(username);
